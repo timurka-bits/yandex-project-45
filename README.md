@@ -79,9 +79,10 @@ test_probs_lr = lr_model.predict_proba(X_test_meta)[:, 1]
 test_probs_lgb = lgb_model.predict_proba(X_test_meta_df)[:, 1]
 
 final_probs = best_w * test_probs_lr + (1 - best_w) * test_probs_lgb
-final_preds = (final_probs > best_th).astype(int)```
+final_preds = (final_probs > best_th).astype(int)
+```
 
-## Направления для улучшения
+## Результаты
 
 ---
 
